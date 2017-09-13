@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello AngularJS</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+</head>
+
+<body ng-app="" ng-init="
+a=5;
+b=5;
+arr=[2,5,2];
+warnaDiv1 = '#7FF000';
+warnaDiv2 = 'crimson';
+">
+
+    <div style="background-color: {{warnaDiv1}}; margin: 1%; padding:1%; ">
+        Contoh AngularJS Expression Menjumlahkan Angka (5+5) menggunakan expression
+        <br/><span> {{a}}+{{b}} = {{a+b}}</span>
+    </div>
+
+
+    <div style="background-color: {{warnaDiv2}}; margin:1%; padding:1%;">
+        Contoh AngularJS Expression Array
+        <br/><span ng-bind="arr"></span>
+    </div>
+
+    <div style="background-color: cadetblue; color:white; font-weight: bold; margin: 1%; padding: 1%;">
+        <span ng-bind="'Hasil kali menggunakan (ng-bind) ' + {{a}} + ' x ' + {{b}} + ' = ' +  {{a*b}}"></span>
+    </div>
+
+    <div style="background-color: aqua; padding:1%; margin: 1%;">
+       <input type="text" ng-model="color" style="background-color: {{color}}; margin-right: 0.4%; margin-bottom: 0.4%;"/>
+       <br/><span ng-bind="'Input type Color = ' +  color" style="color: {{color}}; font-weight: bold;"></span>
+    </div>
+
+</body>
+
+</html>
